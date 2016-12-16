@@ -15,7 +15,7 @@ OpenCV opencv;
 
 //MUSIC//
 MidiBus myBus1; // The MidiBus - continous -- fiolett
-//MidiBus myBus2; // The MidiBus -- melodi -- grønn
+//MidiBus myBus2; // The MidiBus -- melodi -- grønn //uncomment and to add anoter bus aka vitual midi 
 MidiBus myBus3; // The MidiBus --- bass --- pink
 
 long nextTimeNodeMillis = 0;
