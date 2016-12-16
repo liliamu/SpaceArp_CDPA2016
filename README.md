@@ -1,18 +1,15 @@
-# SpaceArp_CDPA2016
-Processing  Open CV to calculate average flow of movement, and sends MIDI notes via Ableton. Set in C scale minor 
+# SpaceArp_CDPA2016 - Read you wrote you 
+Processing Uses Open CV to calculate average flow of movement, and sends MIDI notes via Ableton. Set in C scale minor. 
+For audiovisual installation Space Arp, a collison 
 
 
-#Read you wrote you 
-
-
-Synopsis
+#Synopsis
 This code is developed for Space Arp, a collision, which is an audiovisual installation that detects the average flow of movement, and translates it to sound though Ableton. Movement is set to play random notes in a C minor scale, iterating though 3x3 instruments. A shadow display is visualising the movement through 3 light sources via DMX output. 
 
-
-Motivation
+#Motivation
 This code is developed for a master student project for IT University of Copenhagen, for the course Digital Creative Practice. 
 
-Installation
+#Installation
 Needs a camera feed, DMX input can be commented out. Music Software that can output MIDI (I use Ableton) 
 
 Set MIDI IAC driver online, set the required amount of Buses you will use. 
@@ -24,11 +21,11 @@ dmxP512: http://motscousus.com/stuff/2011-01_dmxP512/
 gab.opencv: http://atduskgreg.github.io/opencv-processing/reference/ 
 
 
-Contributors
+#Contributors
 Lilia K.A (liam@itu.dk)
 Ole Kristensen (olek@itu.dk) 
 
-License
+#License
 https://creativecommons.org/licenses/by-nc-sa/4.0/ 
 Share — copy and redistribute the material in any medium or format
 Adapt — remix, transform, and build upon the material
