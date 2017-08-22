@@ -45,7 +45,7 @@ int velocity = 127; //hit hardness: 0 - 127
 //// LIGHTS ///// 
 DmxP512 dmxOutput;
 int universeSize=128;
-String DMXPRO_PORT="/dev/cu.usbserial-EN172579";//case matters ! on windows port must be upper cased.
+String DMXPRO_PORT="/dev/cu.usbserial-EN173628";//case matters ! on windows port must be upper cased.
 int DMXPRO_BAUDRATE=115000;
 
 float runningAverageMovement = 0;
@@ -95,7 +95,7 @@ void draw() {
     for(int i = 0; i < 16; i++){
       myBus1.sendNoteOff(Bus1channel, pitch, 0); // Send a Midi noteOff
     }
-    int nodeFractions[] = {8, 4, 4, 2, 2};
+    int nodeFractions[] = {4, 4, 2, 2};
     int noteLength = nodeFractions[round(random(0, nodeFractions.length-1))];
 
     nextTimeNodeMillis = millis() + (round(random(1, 2))*((60*1000/tempo)/noteLength));
@@ -124,7 +124,7 @@ void draw() {
       myBus3.sendNoteOff(Bus3channel, pitchBass, 0); // Send a Midi noteOff
     }
 
-    int nodeFractions[] = {4, 4, 2, 2}; //note lengde, helnote = 4 takt, halv 2, kvart 4 etc 
+    int nodeFractions[] = {8, 4, 4, 2, 2}; //note lengde, helnote = 4 takt, halv 2, kvart 4 etc 
     int noteLength = nodeFractions[round(random(0, nodeFractions.length-1))];
 
     nextTimeBassNodeMillis = millis() + (round(random(1, 2))*((60*1000/tempo)/noteLength));
@@ -147,20 +147,20 @@ void draw() {
 
   ///// LIGHTS  ///// 
 
-  dmxOutput.set(19, 255); //19 always on - camera cannot see in the dark...
+  dmxOutput.set(25, 255); //19 always on - camera cannot see in the dark...
 
   if (aveFlow.mag() > 1.5) { //white light 2-  blink when movement over 1.5 (same as bass)
-    dmxOutput.set(13, 255);
+    dmxOutput.set(23, 255);
   }
 
   if (aveFlow.mag() > 3.5) { //turn off white light 2 when movement over 3.5 (high)
-    dmxOutput.set(13, 0);
+    dmxOutput.set(23, 0);
   }
 
   if (aveFlow.mag() > 2.3) { //red light off when movement over 2.3 (mid)
-    dmxOutput.set(21, 0);
+    dmxOutput.set(11, 0);
   } else {
-    dmxOutput.set(21, 255); //red light on default 
+    dmxOutput.set(11, 255); //red light on default 
   }
 }
 
