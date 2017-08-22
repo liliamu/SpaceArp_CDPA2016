@@ -12,6 +12,7 @@ import themidibus.*;
 import org.openkinect.processing.*;
 import org.openkinect.freenect.*;
 
+// USES KINECT AS VIDEO FEED
 
 //Capture video;
 OpenCV opencv;
